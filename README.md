@@ -180,12 +180,14 @@ Setup:
 
 1. Clone the GitHub repository:
 
-git clone [repository_url]
-cd [repository_name]
+git clone Elevator_Management_System
+
+cd Elevator_Management_System
 
 2. Set up a virtual environment and activate it:
 
 python -m venv env
+
 source env/bin/activate  # On Windows use: .\env\Scripts\activate
 
 3. Install the required packages:
