@@ -123,25 +123,24 @@ Python 3.8+
 
 Setup:
 
-Clone the GitHub repository:
+1. Clone the GitHub repository:
 
 git clone [repository_url]
 cd [repository_name]
 
-Set up a virtual environment and activate it:
+2. Set up a virtual environment and activate it:
 
 python -m venv env
-
 source env/bin/activate  # On Windows use: .\env\Scripts\activate
 
-Install the required packages:
+3. Install the required packages:
 
 pip install -r requirements.txt
 
 Running:
 
 Begin the Django development server:
-python manage.py runserver
+4. python manage.py runserver
 
 **Architecture and Modelling**
 
