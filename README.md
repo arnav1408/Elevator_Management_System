@@ -1,6 +1,7 @@
 # Elevator_System
 
-**Introduction** <br />
+**Introduction**
+
 The Elevator Management System (EMS) is developed to effectively handle and automate the operations of multiple elevators within a building. Through our EMS, users can dispatch floor requests to elevators, and the system strategically assigns an elevator that optimally caters to the request.
 
 **Thought Process**
