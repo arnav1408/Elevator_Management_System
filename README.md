@@ -24,21 +24,29 @@ Django Framework: With its "batteries-included" philosophy, Django furnishes all
 Endpoint: POST /api/elevators/initialise_system/\
 Description: This endpoint initializes the elevator system by deleting all existing elevators and creating a fresh set of elevators as per the provided count.
 
-Payload:\
-json format\
-{\
-    "num_elevators": <number_of_elevators>\
-}\
-Example: To initialize the system with 3 elevators:\
-{\
-    "num_elevators": 3\
+Payload:
+
+json format
+
+{
+
+    "num_elevators": <number_of_elevators>
+
+}
+
+Example: To initialize the system with 3 elevators:
+
+{
+
+    "num_elevators": 3
+
 }
 
 2. Get Next Destination for an Elevator
    
 Endpoint: GET /api/elevators/<lift_id>/next_destination/
 
-Description: Returns the next destination floor for the specified elevator.\
+Description: Returns the next destination floor for the specified elevator.
 
 Example: To check the next destination for elevator with ID 2: GET /api/elevators/2/next_destination/
 
