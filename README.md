@@ -140,6 +140,7 @@ pip install -r requirements.txt
 Running:
 
 Begin the Django development server:
+
 4. python manage.py runserver
 
 **Architecture and Modelling**
