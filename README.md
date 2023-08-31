@@ -208,5 +208,6 @@ serializers.py: Responsible for data serialization.
 
 **Plugins and Libraries Employed**
 
-Django Rest Framework (DRF): Facilitates the creation of API endpoints and manages request/response data.\
+Django Rest Framework (DRF): Facilitates the creation of API endpoints and manages request/response data.
+
 SQLite: As an embedded SQL database engine, SQLite offers a lightweight, serverless, and self-contained system.
