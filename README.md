@@ -84,11 +84,8 @@ json
 Example: To mark elevator with ID 2 for maintenance:
 
 json
-
 {
-
-    "is_maintenance": true
-
+"is_maintenance": true
 }
 
 5. Send Floor Request for an Elevator
@@ -102,9 +99,7 @@ Payload:
 json
 
 {
-
-    "floor": <desired_floor_number>
-
+"floor": <desired_floor_number>
 }
 
 Example: To send a request to elevator with ID 2 to move to the 5th floor:
