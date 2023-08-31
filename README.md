@@ -5,12 +5,17 @@
 The Elevator Management System (EMS) is developed to effectively handle and automate the operations of multiple elevators within a building. Through our EMS, users can dispatch floor requests to elevators, and the system strategically assigns an elevator that optimally caters to the request.
 
 **Thought Process**
+
 Scalability: Recognizing that large buildings can house several elevators, the system was architected with scalability at its core. This ensures that even as the number of requests or elevators burgeon, the system remains efficient.
+
 Efficiency: Ensuring rapid responses, the system leverages an algorithm that contemplates both the direction of the elevator and its proximity to the requested floor.
+
 Reliability: Real-world scenarios often include elevator maintenance or unforeseen breakdowns. Our EMS acknowledges this, providing functionalities to mark elevators as non-operational.
 
 **Design Decisions**
+
 Database Choice: SQLite was chosen for its lightweight nature, minimal setup, and reliability for development projects.
+
 Django Framework: With its "batteries-included" philosophy, Django furnishes all essential tools for web development straight out of the box.
 
 **API Contracts**
@@ -113,9 +118,11 @@ json
 **Setup and Deployment**
 
 Prerequisites:
+
 Python 3.8+
 
 Setup:
+
 Clone the GitHub repository:
 
 git clone [repository_url]
@@ -124,6 +131,7 @@ cd [repository_name]
 Set up a virtual environment and activate it:
 
 python -m venv env
+
 source env/bin/activate  # On Windows use: .\env\Scripts\activate
 
 Install the required packages:
@@ -131,6 +139,7 @@ Install the required packages:
 pip install -r requirements.txt
 
 Running:
+
 Begin the Django development server:
 python manage.py runserver
 
@@ -141,11 +150,17 @@ Architecture: Adhered to Django's conventional MTV (Model, Template, View) archi
 Database Modelling: The primary model is Elevator, equipped with attributes such as current_floor, status, direction, and so forth.
 
 Repository Structure:
+
 models.py: Contains the database models.
+
 views.py: Manages the business logic and API endpoints.
+
 serializers.py: Responsible for data serialization.
+
 ...
 
-Plugins and Libraries Employed
+**Plugins and Libraries Employed**
+
 Django Rest Framework (DRF): Facilitates the creation of API endpoints and manages request/response data.
+
 SQLite: As an embedded SQL database engine, SQLite offers a lightweight, serverless, and self-contained system.
