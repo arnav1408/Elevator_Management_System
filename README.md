@@ -22,7 +22,7 @@ Django Framework: With its "batteries-included" philosophy, Django furnishes all
 
 1. Initialise Elevator System\
 Endpoint: POST /api/elevators/initialise_system/\
-Description: This endpoint initializes the elevator system by deleting all existing elevators and creating a fresh set of elevators as per the provided count.\
+Description: This endpoint initializes the elevator system by deleting all existing elevators and creating a fresh set of elevators as per the provided count.
 
 Payload:\
 json format\
@@ -32,87 +32,134 @@ json format\
 Example: To initialize the system with 3 elevators:\
 {\
     "num_elevators": 3\
-}\
+}
 
 2. Get Next Destination for an Elevator
+   
 Endpoint: GET /api/elevators/<lift_id>/next_destination/
 
-Description: Returns the next destination floor for the specified elevator.
+Description: Returns the next destination floor for the specified elevator.\
+
 Example: To check the next destination for elevator with ID 2: GET /api/elevators/2/next_destination/
 
 3. Change Door Status of an Elevator
+   
 Endpoint: PATCH /api/elevators/<lift_id>/change_door_status/
+
 Description: Allows changing the door status (open/close) of the specified elevator. The elevator should be in a neutral direction to perform this action.
 
 Payload:
+
 json format
+
 {
+
     "door_status": "O" or "C"
+    
 }
+
 Example: To change the door status of elevator with ID 2 to open:
 
 json
+
 {
+
     "door_status": "O"
+    
 }
 
 4. Mark Elevator for Maintenance
+   
 Endpoint: PATCH /api/elevators/<lift_id>/mark_maintenance/
 
 Description: Marks the elevator as either operational or under maintenance.
 
 Payload:
+
 json
+
 {
+
     "is_maintenance": true or false
+    
 }
+
 Example: To mark elevator with ID 2 for maintenance:
 
 json
+
 {
+
     "is_maintenance": true
+    
 }
 
 5. Send Floor Request for an Elevator
+
 Endpoint: POST /api/elevators/<lift_id>/floor_request/
 
 Description: Registers a request for the elevator to move to a specified floor.
+
 Payload:
+
 json
+
 {
+
     "floor": <desired_floor_number>
+    
 }
+
 Example: To send a request to elevator with ID 2 to move to the 5th floor:
+
 json
+
 {
+
     "floor": 5
+    
 }
 
 6. Get Current Direction of an Elevator
+   
 Endpoint: GET /api/elevators/<lift_id>/direction/
 
 Description: Returns the current movement direction of the specified elevator.
+
 Example: To get the current direction of elevator with ID 2: GET /api/elevators/2/direction/
 
 7. Move Elevator to Next Destination
+   
 Endpoint: POST /api/elevators/<lift_id>/move_elevator/
 
 Description: Commands the specified elevator to move to its next destination based on its request queue.
+
 Example: To move the elevator with ID 2 to its next destination: POST /api/elevators/2/move_elevator/
 
 8. Assign an Elevator based on Floor Request
+   
 Endpoint: POST /api/elevators/assign_elevator/
 
 Description: Assigns an operational elevator to cater to a request from a specific floor using the algorithm to determine the most optimal lift for the operation.
+
 Payload:
+
 json
+
 {
+
     "floor": <requested_floor_number>
+    
 }
+
 Example: To request an elevator for the 3rd floor:
+
 json
+
 {
+
     "floor": 3
+    
 }
 
 **Setup and Deployment**
